@@ -6,7 +6,7 @@ let character = {};
 
 //  Re-assign the value of `character` variable to and object with the key `characterName` and value of "Arya"
 character= {
-    characterName = "Arya",
+    characterName : "Arya",
 };
 // - A variable named `age` is predefined with value 20. Add a new key named `character-age` with the value of `age` variable i.e 20 (don't use the value 20)
 
