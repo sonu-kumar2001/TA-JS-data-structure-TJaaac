@@ -52,9 +52,11 @@ for (let user of userIds) {
     times(0); // []
     times(5); // ['test', 'test', 'test', 'test', 'test']
 */
-let result = [];
+
 function times(number,character="test") {
-  for(let i =1; i<=number; i++) {
+  if(number<1) return [];
+  let result = [];
+  for(let i =0; i< number; i++) {
     result.push(character);
   }
   return result;
@@ -79,11 +81,13 @@ function times(number,character="test") {
     revert(['a', 'd', 'c', 'b']); // ['b', 'c', 'd', 'a']
     revert(['Ryan', 'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
-let arr = [];
+
 function revert(array) {
+  let arr = [];
   for (let i=1; i<=array.length; i++) {
     arr.unshift(array[i]);
   }
+  return arr;
 }
 
 // Uncomment the code below and test the output
@@ -103,12 +107,14 @@ function revert(array) {
     clear(['a', undefined, 'd', 0,  'c', 'b']); // ['b', 'c', 'd', 'a']
     clear(['Ryan', null, 0,  'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
-let arr = []
+
 function clear(array) {
+  let arr = [];
   for(let element of array) {
     if(Boolean(element) === true) 
     arr.unshift(element);
   }
+  return arr;
 }
 
 // Uncomment the code below and test the output
